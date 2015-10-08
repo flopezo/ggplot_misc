@@ -1,0 +1,16 @@
+library(MASS)
+library(ggplot2)
+
+b <- biopsy
+b
+
+b$classn[b$class=="benign"] <- 0
+b$classn[b$class=="malignant"] <- 1
+b
+
+#fit logistic regression line
+#use smoothing method glm with binomial formula
+ggplot(b, aes(x=V1, y=classn)) + 
+  geom_point(position=position_jitter(width=0.3, height=0.06), alpha=0.4,
+             shape=21, size=1.5) + 
+  stat_smooth(method=glm, family=binomial)
