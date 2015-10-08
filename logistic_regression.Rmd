@@ -26,7 +26,7 @@ sp + geom_point() + stat_smooth(method=lm, level=0.95)
 #fit logistic regression line
 library(MASS) #for data
 b <- biopsy
-#b
+head(b)
 
 b$classn[b$class=="benign"] <- 0
 b$classn[b$class=="malignant"] <- 1
