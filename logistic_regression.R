@@ -1,6 +1,20 @@
-library(MASS)
 library(ggplot2)
 
+#install.packages("alr3")
+library(alr3)
+
+#load Pearson-Lee data: collection of data, heights in inches of mothers 
+#and their daughters, on over 1100 families in England in the period 1893
+#to 1898
+ht <- heights
+head(ht)
+
+#adding fitted regression model lines
+#base plot
+sp <- ggplot(ht, aes(x=Mheight, y=Dheight))
+sp + geom_point() + stat_smooth(method=lm, level=0.95)
+
+library(MASS) # for data
 b <- biopsy
 b
 
