@@ -1,21 +1,21 @@
 ---
 title: "logistic_regression"
 author: "Federico Lopez"
-date: "`r Sys.Date()`"
-output: pdf_document
+date: '`r Sys.Date()`'
+output: html_document
 ---
 
 
-```{r, echo=FALSE, message = FALSE}
+```{r, echo=FALSE, message=FALSE}
 library(MASS)
 library(ggplot2)
 
 b <- biopsy
-b
+#b
 
 b$classn[b$class=="benign"] <- 0
 b$classn[b$class=="malignant"] <- 1
-b
+#b
 
 #fit logistic regression line
 #use smoothing method glm with binomial formula
