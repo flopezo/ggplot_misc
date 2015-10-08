@@ -30,7 +30,7 @@ head(b)
 
 b$classn[b$class=="benign"] <- 0
 b$classn[b$class=="malignant"] <- 1
-#b
+head(b)
 
 #use smoothing method glm with binomial formula
 ggplot(b, aes(x=V1, y=classn)) + 
