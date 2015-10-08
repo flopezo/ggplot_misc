@@ -39,5 +39,5 @@ ggplot(b, aes(x=V1, y=classn)) +
   stat_smooth(method=glm, family=binomial)
 
 #use the stat_smooth() loess (locally weighted polynomial) curve method
-    sp + geom_point() + stat_smooth(method=loess)
+    sp + geom_point(colour="gray") + stat_smooth(method=loess)
 ```
